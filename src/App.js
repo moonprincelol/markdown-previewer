@@ -1,5 +1,6 @@
 import './App.scss';
 import React, {useState} from 'react';
+import Reactmarkdown from 'react-markdown';
 
 const defaultMarkdown = 
 
@@ -38,20 +39,16 @@ And of course there are lists.
 function App() {
   const [input, setInput] = useState(defaultMarkdown);
 
-  const handleChange = (e) => {
-    setInput(e.target.value);
-  }
 
   return (
     <div className="App">
       <header className="App-header">
-        <textarea id="editor" value={input} onChange={handleChange()}>
+        <textarea id="editor" value={input} onChange={(e) => setInput(e.target.value)}>
         </textarea>
         <div id="preview">
           <Reactmarkdown>{input}</Reactmarkdown>
         </div>
 
-        <h1>Hello</h1>
       </header>
     </div>
   );

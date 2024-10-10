@@ -3,16 +3,42 @@
   
 
 
-  .App-header {
+  
+
+  #editor {
+    width: 50%;
+    height: 100%;
     background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
     color: white;
+    border: 1px solid white;
+    padding: 10px;
+    font-size: 1.5em;
   }
+
+  #preview {
+    width: 50%;
+    height: 100%;
+    background-color: #282c34;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    font-size: 1.5em;
+    display: inline-block;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
   
 }
 
